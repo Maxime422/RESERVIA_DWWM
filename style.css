@@ -109,7 +109,6 @@ header li {
 article {
     border-radius: var(--border-radius-big);
     box-shadow: 0 0 16px #0000002e;
-    overflow: hidden;
     background-color: var(--color-white);
 }
 
@@ -128,9 +127,10 @@ aside article {
     display: grid;
     gap: 2%;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto repeat(2, 1fr) auto;
+    grid-template-rows: auto repeat(1, 1fr) auto;
     column-gap: 2rem;
     padding: 1.7rem;
+    background-attachment: fixed;
 }
 
 
@@ -148,7 +148,6 @@ article a {
     display: flex;
     flex-direction: column;
     height: 100%;
-
 }
 
 
