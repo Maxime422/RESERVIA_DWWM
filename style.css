@@ -1,109 +1,187 @@
 /* Les variables */
 :root {
-  --font-weight-light: 150;
-  --font-weight-medium: 300;
-  --font-weight-bold: 550;
-  --font-weight-extra-bold: 750;
-  --font-weight-black: 800;
+    --font-weight-light: 150;
+    --font-weight-medium: 300;
+    --font-weight-bold: 600;
+    --font-weight-extra-bold: 750;
+    --font-weight-black: 800;
 
 
-  --color-primary: #0065FC;
-  --color-white-blue: #DEEBFF;
-  --color-white: #ffffff;
-  --color-gray: #F2F2F2;
-  --color-black: #0a0a0a;
+    --color-primary: #0065FC;
+    --color-white-blue: #DEEBFF;
+    --color-white: #ffffff;
+    --color-gray: #F0F0F0;
+    --color-gray-black: #D9D9D9;
+    --color-black: #0a0a0a;
 
-  --font-main: "Raleway", sans-serif;
+
+    --font-main: "Raleway", sans-serif;
 
 
-  --text-size-medium: 1.5em;
-  --text-size-medium-large: 2em;
-  --text-size-large: 4em;
-  --text-size-extra-large: 8em;
+    --text-size-medium: 1rem;
+    --text-size-large: 1.5rem;
+    --text-size-extra-large: 2rem;
 
-  --border-radius-normal: 0.5em;
-  --border-radius-big: 0.75em;
-  --border-radius-extra-big: 1em;
-  --border-radius-absolu: 6em;
 
-  --margin-small: 0.25em;
-  --margin-medium: 1em;
+    --border-radius-normal: 0.5rem;
+    --border-radius-big: 1rem;
+    --border-radius-extra-big: 1rem;
+    --border-radius-absolu: 6rem;
 
-  --padding-buttons-small: 0.5em 0.65em;
-  --padding-buttons-medium: 0.65em 1em;
 
-  --padding-medium: 0.6em;
-  --padding-large: 1em;
+    --margin-small: 0.25rem;
+    --margin-medium: 1rem;
+    --padding-buttons-small: 0.5rem 0.65rem;
 
-  --gap-medium: 0.6em;
-  --gap-large: 1em;
+    --padding-buttons-medium: 1rem 1.5rem;
+    --padding-medium: 0.6rem;
+    --padding-large: 1rem;
+    --padding-extra-large: 2rem;
 
+    --gap-medium: 0.6rem;
+    --gap-large: 1rem;
+    --gap-extra-large: 2rem;
 }
+
 
 
 /* Toutes les règles primaires */
 html {
-  background-color: var(--color-white);
-  color: var(--color-black);
-  font-family: var(--font-main);
+    background-color: var(--color-white);
+    color: var(--color-black);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  line-height: inherit;
-  color: inherit;
-  font: inherit;
-  text-decoration: none;
-  list-style: none;
-  border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: inherit;
+    color: inherit;
+    font: inherit;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    font-family: var(--font-main);
 }
+
 
 
 /* Gestion des marges et des paddings principaux */
-main, footer, header {
-  padding: 2rem 2rem;
+main, footer {
+    padding: 0rem 2rem;
 }
 
-section {
-    margin: 2rem 0;
+footer {
+    padding: var(--padding-extra-large);
 }
 
 
 
 /* Textes (H1, H2, ...) */
-h1, h2 {
-  font-size: 1.5rem;
+h1 {
+    font-size: var(--text-size-extra-large);
 }
 
-h1, h2, h3,
-footer li:first-child, button, input[type="search"], input[type="submit"] {
-  font-weight: 600;
+h2 {
+    font-size: var(--text-size-large);
 }
 
-h3, button {
-  font-size: 1.1rem;
+h1, h2, h3, button, .bold,
+footer li:first-child, input[type="submit"] {
+    font-weight: var(--font-weight-extra-bold);
 }
+
 
 
 
 /* Les display */
 .disp, footer, header,
-aside a, span {
+aside a, span, aside>article>a{
     display: flex;
 }
 
-/* Li Footer et Header */
-footer li {
-    padding: var(--padding-medium);
+
+
+/* Header */
+header {
+    margin:  0rem 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
+/* Navigation Header */
 header li {
-    padding: var(--padding-large);
+    padding: var(--padding-extra-large);
+    border-top: 0.2rem transparent solid;
+    transition-duration: 0.5s;
+}
+
+/* Navigation Hover */
+header li:hover {
+    color: var(--color-primary);
+    border-top: 0.2rem solid var(--color-primary);
 }
 
 
+
+
+/* Div title */
+main>div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-medium);
+    margin-bottom: 2rem;
+}
+
+main>div>div:nth-child(4) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--gap-large);
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-medium);
+
+    border-radius: var(--border-radius-absolu);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray-black);
+}
+
+
+button > em.fa-solid {
+    background-color: var(--color-white-blue);
+    color: var(--color-primary);
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -0.2rem;
+    font-size: 1.3rem;
+}
+
+button > span {
+    padding: 0rem 0.8rem;
+}
+
+/* Section */
+section:nth-child(2) {
+    display: flex;
+    gap: var(--gap-extra-large);
+}
+
+section>div, section>aside {
+    padding: var(--padding-extra-large);
+    border-radius: var(--border-radius-extra-big);
+
+}
 
 /* Articles */
 article {
@@ -112,17 +190,37 @@ article {
     background-color: var(--color-white);
 }
 
+article:hover {
+    transform: scale(1.01);
+}
 
-.grid__hebergement article,
-aside article {
+/* Aside articles */
+aside {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-medium);
+    justify-content: space-between;
     border: var(--color-white)  0.2rem solid;
 }
 
-/* Les grids */
+aside> div {
+    display: flex;
+    justify-content: space-between;
+}
 
+aside article {
+    display: flex;
+    gap: var(--gap-medium);
+    padding: var(--padding-medium);
+    border-radius: var(--border-radius-normal);
+    background-color: var(--color-white-blue);
+}
+
+aside article:hover {
+    transform: scale(1.01);
+}
+ 
+
+/* Les grids */
 .grid__hebergement {
     display: grid;
     gap: 2%;
@@ -139,8 +237,8 @@ aside article {
     height: 7rem;
     object-fit: cover;
     width: 100%;
-    height: 100%;
-    max-width: 100%;
+    height: 10%;
+    max-width: 10%;
 }
 
 /* la gestions des articles */
@@ -159,21 +257,22 @@ aside{
 }
 
 
-.fa-star[data-active="true"] {
+.fa-star[data-active="true"], ul > li > a.bold[href="#inscriptions"] {
     color: var(--color-primary);
 }
 
 .fa-star[data-active="false"] {
-    color: var(--color-gray);
+    color: var(--color-gray-black);
+}
+
+/* Supprimer */
+img {
+    width: 10px;
+    height: 10px;
 }
 
 
-
-
-
-
-
-
-img {
-    width: 100px;
+/* Li Footer et Header */
+footer li {
+    padding: var(--padding-medium);
 }

@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
@@ -22,7 +23,7 @@
             <ul class="disp">
                 <li><a href="#hebergements">Hébergements</a></li>
                 <li><a href="#activites">Activités</a></li>
-                <li><a href="#inscriptions">S'inscrire</a></li>
+                <li><a href="#inscriptions" class="bold">S'inscrire</a></li>
             </ul>
         </nav>
     </header>
@@ -34,7 +35,7 @@
         <!-- Section / Titre Recherches & Filtres -->
         <div>
             <h1>Trouvez votre Hébergement pour des vacances de rêve</h1>
-            <p>En plein centre ville ou en pleine nature</p>
+            <p class="bold">En plein centre ville ou en pleine nature</p>
 
             
             <!-- Search Bar -->
@@ -49,30 +50,29 @@
 
             <!-- Filtres -->
             <div>
-                <p>Filtres</p>
+                <p class="bold">Filtres</p>
                 <button>
-                    <i class="fa-solid fa-money-bill-wave"></i>
-                    Économique
+                    <em class="fa-solid fa-money-bill-wave"></em>
+                    <span>Économique</span>
                 </button>
 
                 <button>
-                    <i class="fa-solid fa-child"></i>
-                     Familial
+                    <em class="fa-solid fa-child"></em>
+                    <span>Familial</span>
                 </button>
 
                 <button>
-                    <i class="fa-solid fa-heart"></i>
-                     Romantique
+                    <em class="fa-solid fa-heart"></em>
+                    <span>Romantique</span>
                 </button>
 
                 <button>
-                    <i class="fa-solid fa-dog"></i>
-                     Animaux autorisés
+                    <em class="fa-solid fa-dog"></em>
+                    <span>Animaux autorisés</span>
                 </button>
             </div>
             
 
-            <!-- !!! -->
             <span>
                 <i class="fa-solid fa-dog"></i>
                 <p>Plus de 500 logements sont disponibles dans cette ville</p>
@@ -82,7 +82,7 @@
 
 
         <!-- Section / Hébergements -->
-        <section display="grid">
+        <section>
             <div class="color__gray">
                 <h2>Hébergement à Marseille</h2>
 
@@ -91,7 +91,7 @@
                 <div class="grid__hebergement">
                     <article class="img7">
                         <a href="#">
-                            <img src="hosting/small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="!!!">
+                            <img src="hosting/small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="#">
                             <h3>Auberge de la Cannebière</h3>
                             <p>Nuit à partir de 25 €</p>
                             <div>
@@ -106,7 +106,7 @@
 
                     <article class="img8">
                         <a href="#">
-                            <img src="hosting/small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="!!!">
+                            <img src="hosting/small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="#">
                             <h3>Auberge de la Cannebière</h3>
                             <p>Nuit à partir de 25 €</p>
                             <div>
@@ -121,7 +121,7 @@
 
                     <article>
                         <a href="#" class="img9">
-                            <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="!!!">
+                            <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="#">
                             <h3>Auberge de la Cannebière</h3>
                             <p>Nuit à partir de 25 €</p>
                             <div>
@@ -137,7 +137,7 @@
 
                     <article>
                         <a href="#" class="img10">
-                            <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="!!!">
+                            <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="#">
                             <h3>Auberge de la Cannebière</h3>
                             <p>Nuit à partir de 25 €</p>
                             <div>
@@ -152,7 +152,7 @@
 
                     <article>
                         <a href="#" class="img11">
-                            <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="!!!">
+                            <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="#">
                             <h3>Auberge de la Cannebière</h3>
                             <p>Nuit à partir de 25 €</p>
                             <div>
@@ -167,7 +167,7 @@
 
                     <article>
                         <a href="#" class="img12">
-                            <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="!!!">
+                            <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="#">
                             <h3>Auberge de la Cannebière</h3>
                             <p>Nuit à partir de 25 €</p>
                             <div>
@@ -181,7 +181,7 @@
                     </article>
                 </div>
 
-                <a href="!!!">Afficher plus</a>
+                <a href="#" class="bold">Afficher plus</a>
             </div>
 
          
@@ -193,11 +193,9 @@
                     <i class="fa-solid fa-chart-line"></i>
                 </div>
 
-
-
                 <article>
                     <a href="#">
-                        <img src="hosting/small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="!!!">
+                        <img src="hosting/small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="#">
                         <div>
                             <h3>Auberge de la Cannebière</h3>
                             <p>Nuit à partir de 25 €</p>
@@ -214,8 +212,8 @@
 
 
                 <article>
-                    <a href="!!!">
-                        <img src="hosting/small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="!!!">
+                    <a href="#">
+                        <img src="hosting/small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="#">
                         <div>
                             <h3>Auberge de la Cannebière</h3>
                             <p>Nuit à partir de 25 €</p>
@@ -231,8 +229,8 @@
                 </article>
 
                 <article>
-                    <a href="!!!">
-                        <img src="hosting/small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="!!!">
+                    <a href="#">
+                        <img src="hosting/small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="#">
                         <div>
                             <h3>Auberge de la Cannebière</h3>
                             <p>Nuit à partir de 25 €</p>
@@ -258,43 +256,43 @@
             <!-- Articles /  -->
              <div class="grid__activite">
                 <article class="img1">
-                    <a href="!!!">
-                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="!!!">
+                    <a href="#">
+                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="#">
                         <h3>Auberge de la Cannebière</h3>
                     </a>
                 </article>
 
                 <article class="img2">
-                    <a href="!!!">
-                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="!!!">
+                    <a href="#">
+                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="#">
                         <h3>Auberge de la Cannebière</h3>
                     </a>
                 </article>
 
                 <article class="img3">
-                    <a href="!!!">
-                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="!!!">
+                    <a href="#">
+                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="#">
                         <h3>Auberge de la Cannebière</h3>
                     </a>
                 </article>
 
                 <article class="img4">
-                    <a href="!!!">
-                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="!!!">
+                    <a href="#">
+                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="#">
                         <h3>Auberge de la Cannebière</h3>
                     </a>
                 </article>
 
                 <article class="img5">
-                    <a href="!!!">
-                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="!!!">
+                    <a href="#">
+                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="#">
                         <h3>Auberge de la Cannebière</h3>
                     </a>
                 </article>
 
                 <article class="img6">
-                    <a href="!!!">
-                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="!!!">
+                    <a href="#">
+                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="#">
                         <h3>Auberge de la Cannebière</h3>
                     </a>
                 </article>
@@ -308,23 +306,23 @@
     <footer>
         <ul>
             <li>À propos</li>
-            <li><a href="!!!">Fonctionnement du site</a></li>
-            <li><a href="!!!">Conditions générales de ventes</a></li>
-            <li><a href="!!!">Contact</a></li>
+            <li><a href="#">Fonctionnement du site</a></li>
+            <li><a href="#">Conditions générales de ventes</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
 
 
         <ul>
             <li>Nos Hébergements</li>
-            <li><a href="!!!">Charte qualité</a></li>
-            <li><a href="!!!">Soumettre votre hôtel</a></li>
+            <li><a href="#">Charte qualité</a></li>
+            <li><a href="#">Soumettre votre hôtel</a></li>
         </ul>
 
 
         <ul>
             <li>Assistance</li>
-            <li><a href="!!!">Centre d'aide</a></li>
-            <li><a href="!!!">Nous contacter</a></li>
+            <li><a href="#">Centre d'aide</a></li>
+            <li><a href="#">Nous contacter</a></li>
         </ul>
     </footer>
 </body>
