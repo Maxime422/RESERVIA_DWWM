@@ -6,21 +6,21 @@
     <title>Reservia - Home Page</title>
     <meta name="description" content="Reservia est un site de réservation de vacances en ligne.">
     <meta name="author" content="Maxime Germis">
+    <link rel="stylesheet" href="stylenew.css">
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
+
+
 <body>
     <!-- Header -->
     <header>
         <div class="logo">
-            <img src="reservia_logo.svg" alt="Logo de Reservia">
+            <img src="reservia_logo.svg" width="100px" alt="Logo de Reservia">
         </div>
         <nav>
-            <ul class="disp">
+            <ul>
                 <li><a href="#hebergements">Hébergements</a></li>
                 <li><a href="#activites">Activités</a></li>
                 <li><a href="#inscriptions" class="bold">S'inscrire</a></li>
@@ -83,15 +83,15 @@
 
         <!-- Section / Hébergements -->
         <section>
-            <div class="color__gray">
+            <div class="color__gray grid_heb">
                 <h2>Hébergement à Marseille</h2>
 
 
                 <!-- Articles  -->
-                <div class="grid__hebergement">
-                    <article class="img7">
-                        <a href="#">
-                            <img src="hosting/small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="#">
+                <article class="img7 article">
+                    <a href="#">
+                        <img src="hosting/small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" width="100px" alt="#">
+                        <div>
                             <h3>Auberge de la Cannebière</h3>
                             <p>Nuit à partir de 25 €</p>
                             <div>
@@ -101,27 +101,14 @@
                                 <i class="fa-solid fa-star" data-active="true"></i>
                                 <i class="fa-solid fa-star" data-active="false"></i>
                             </div>
-                        </a>
-                    </article>
+                        </div>
+                    </a>
+                </article>
 
-                    <article class="img8">
-                        <a href="#">
-                            <img src="hosting/small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="#">
-                            <h3>Auberge de la Cannebière</h3>
-                            <p>Nuit à partir de 25 €</p>
-                            <div>
-                                <i class="fa-solid fa-star" data-active="true"></i>
-                                <i class="fa-solid fa-star" data-active="true"></i>
-                                <i class="fa-solid fa-star" data-active="true"></i>
-                                <i class="fa-solid fa-star" data-active="true"></i>
-                                <i class="fa-solid fa-star" data-active="true"></i>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article>
-                        <a href="#" class="img9">
-                            <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="#">
+                <article class="img8 article">
+                    <a href="#">
+                        <img src="hosting/small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" width="100px" alt="#">
+                        <div>
                             <h3>Auberge de la Cannebière</h3>
                             <p>Nuit à partir de 25 €</p>
                             <div>
@@ -131,28 +118,14 @@
                                 <i class="fa-solid fa-star" data-active="true"></i>
                                 <i class="fa-solid fa-star" data-active="false"></i>
                             </div>
-                        </a>
-                    </article>
+                        </div>
+                    </a>
+                </article>
 
-
-                    <article>
-                        <a href="#" class="img10">
-                            <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="#">
-                            <h3>Auberge de la Cannebière</h3>
-                            <p>Nuit à partir de 25 €</p>
-                            <div>
-                                <i class="fa-solid fa-star" data-active="true"></i>
-                                <i class="fa-solid fa-star" data-active="true"></i>
-                                <i class="fa-solid fa-star" data-active="true"></i>
-                                <i class="fa-solid fa-star" data-active="false"></i>
-                                <i class="fa-solid fa-star" data-active="false"></i>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article>
-                        <a href="#" class="img11">
-                            <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="#">
+                <article>
+                    <a href="#" class="img9 flex">
+                        <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" width="100px" alt="#">
+                        <div>
                             <h3>Auberge de la Cannebière</h3>
                             <p>Nuit à partir de 25 €</p>
                             <div>
@@ -162,24 +135,55 @@
                                 <i class="fa-solid fa-star" data-active="true"></i>
                                 <i class="fa-solid fa-star" data-active="false"></i>
                             </div>
-                        </a>
-                    </article>
+                        </div>
+                    </a>
+                </article>
 
-                    <article>
-                        <a href="#" class="img12">
-                            <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="#">
-                            <h3>Auberge de la Cannebière</h3>
-                            <p>Nuit à partir de 25 €</p>
-                            <div>
-                                <i class="fa-solid fa-star" data-active="true"></i>
-                                <i class="fa-solid fa-star" data-active="true"></i>
-                                <i class="fa-solid fa-star" data-active="true"></i>
-                                <i class="fa-solid fa-star" data-active="true"></i>
-                                <i class="fa-solid fa-star" data-active="true"></i>
-                            </div>
-                        </a>
-                    </article>
-                </div>
+
+                <article>
+                    <a href="#" class="img10 article">
+                        <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" width="100px" alt="#">
+                        <h3>Auberge de la Cannebière</h3>
+                        <p>Nuit à partir de 25 €</p>
+                        <div>
+                            <i class="fa-solid fa-star" data-active="true"></i>
+                            <i class="fa-solid fa-star" data-active="true"></i>
+                            <i class="fa-solid fa-star" data-active="true"></i>
+                            <i class="fa-solid fa-star" data-active="false"></i>
+                            <i class="fa-solid fa-star" data-active="false"></i>
+                        </div>
+                    </a>
+                </article>
+
+                <article>
+                    <a href="#" class="img11 article">
+                        <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" width="100px" alt="#">
+                        <h3>Auberge de la Cannebière</h3>
+                        <p>Nuit à partir de 25 €</p>
+                        <div>
+                            <i class="fa-solid fa-star" data-active="true"></i>
+                            <i class="fa-solid fa-star" data-active="true"></i>
+                            <i class="fa-solid fa-star" data-active="true"></i>
+                            <i class="fa-solid fa-star" data-active="true"></i>
+                            <i class="fa-solid fa-star" data-active="false"></i>
+                        </div>
+                    </a>
+                </article>
+
+                <article>
+                    <a href="#" class="img12 article">
+                        <img src="hosting/small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" width="100px" alt="#">
+                        <h3>Auberge de la Cannebière</h3>
+                        <p>Nuit à partir de 25 €</p>
+                        <div>
+                            <i class="fa-solid fa-star" data-active="true"></i>
+                            <i class="fa-solid fa-star" data-active="true"></i>
+                            <i class="fa-solid fa-star" data-active="true"></i>
+                            <i class="fa-solid fa-star" data-active="true"></i>
+                            <i class="fa-solid fa-star" data-active="true"></i>
+                        </div>
+                    </a>
+                </article>
 
                 <a href="#" class="bold">Afficher plus</a>
             </div>
@@ -188,18 +192,20 @@
 
             <!-- Aside / Les plus populaires -->
             <aside>
-                <div>
+                <header>
                     <h2>Les plus populaires</h2>
                     <i class="fa-solid fa-chart-line"></i>
-                </div>
+                </header>
 
                 <article>
-                    <a href="#">
-                        <img src="hosting/small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="#">
+                    <a href="#" class="flex">
+                        <img src="hosting/small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" width="100px" alt="#">
                         <div>
-                            <h3>Auberge de la Cannebière</h3>
-                            <p>Nuit à partir de 25 €</p>
                             <div>
+                                <h3>Auberge de la Cannebière</h3>
+                                <p>Nuit à partir de 25 €</p>
+                            </div>
+                            <div class="star">
                                 <i class="fa-solid fa-star" data-active="true"></i>
                                 <i class="fa-solid fa-star" data-active="true"></i>
                                 <i class="fa-solid fa-star" data-active="true"></i>
@@ -212,34 +218,38 @@
 
 
                 <article>
-                    <a href="#">
-                        <img src="hosting/small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="#">
+                    <a href="#" class="flex">
+                        <img src="hosting/small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" width="100px" alt="#">
                         <div>
-                            <h3>Auberge de la Cannebière</h3>
-                            <p>Nuit à partir de 25 €</p>
                             <div>
+                                <h3>Auberge de la Cannebière</h3>
+                                <p>Nuit à partir de 25 €</p>
+                            </div>
+                            <div class="star">
                                 <i class="fa-solid fa-star" data-active="true"></i>
                                 <i class="fa-solid fa-star" data-active="true"></i>
                                 <i class="fa-solid fa-star" data-active="true"></i>
                                 <i class="fa-solid fa-star" data-active="true"></i>
-                                <i class="fa-solid fa-star" data-active="false"></i>
+                                <i class="fa-solid fa-star" data-active="true"></i>
                             </div>
                         </div>
                     </a>
                 </article>
 
                 <article>
-                    <a href="#">
-                        <img src="hosting/small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="#">
+                    <a href="#" class="flex">
+                        <img src="hosting/small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" width="100px" alt="#">
                         <div>
-                            <h3>Auberge de la Cannebière</h3>
-                            <p>Nuit à partir de 25 €</p>
                             <div>
+                                <h3>Auberge de la Cannebière</h3>
+                                <p>Nuit à partir de 25 €</p>
+                            </div>
+                            <div class="star">
                                 <i class="fa-solid fa-star" data-active="true"></i>
                                 <i class="fa-solid fa-star" data-active="true"></i>
                                 <i class="fa-solid fa-star" data-active="true"></i>
                                 <i class="fa-solid fa-star" data-active="true"></i>
-                                <i class="fa-solid fa-star" data-active="false"></i>
+                                <i class="fa-solid fa-star" data-active="true"></i>
                             </div>
                         </div>
                     </a>
@@ -254,45 +264,45 @@
 
 
             <!-- Articles /  -->
-             <div class="grid__activite">
-                <article class="img1">
+            <div class="grid_activ">
+                <article id="img1">
                     <a href="#">
-                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="#">
+                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" width="100px" alt="#">
                         <h3>Auberge de la Cannebière</h3>
                     </a>
                 </article>
 
-                <article class="img2">
+                <article id="img2">
                     <a href="#">
-                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="#">
+                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" width="100px" alt="#">
                         <h3>Auberge de la Cannebière</h3>
                     </a>
                 </article>
 
-                <article class="img3">
+                <article id="img3">
                     <a href="#">
-                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="#">
+                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" width="100px" alt="#">
                         <h3>Auberge de la Cannebière</h3>
                     </a>
                 </article>
 
-                <article class="img4">
+                <article id="img4">
                     <a href="#">
-                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="#">
+                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" width="100px" alt="#">
                         <h3>Auberge de la Cannebière</h3>
                     </a>
                 </article>
 
-                <article class="img5">
+                <article id="img5">
                     <a href="#">
-                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="#">
+                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" width="100px" alt="#">
                         <h3>Auberge de la Cannebière</h3>
                     </a>
                 </article>
 
-                <article class="img6">
+                <article id="img6">
                     <a href="#">
-                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="#">
+                        <img src="activity/medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" width="100px" alt="#">
                         <h3>Auberge de la Cannebière</h3>
                     </a>
                 </article>

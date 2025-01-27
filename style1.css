@@ -1,0 +1,258 @@
+/* Les variables */
+:root {
+    --font-weight-bold: 600;
+    --font-weight-extra-bold: 750;
+
+    --color-primary: #0065FC;
+    --color-white-blue: #DEEBFF;
+    --color-white: #ffffff;
+    --color-gray: #F0F0F0;
+    --color-gray-black: #D9D9D9;
+
+    --font-main: "Raleway", sans-serif;
+    --text-size-medium: 1rem;
+    --text-size-large: 1.5rem;
+    --text-size-extra-large: 2rem;
+
+    --border-radius-normal: 0.5rem;
+    --border-radius-big: 1rem;
+    --border-radius-extra-big: 1rem;
+    --border-radius-absolu: 5rem;
+
+    --margin-medium: 1rem;
+    --margin-left-right: 0rem 2rem;
+    --margin-extra: 1rem;
+
+    --padding-small: 0.3rem;
+    --padding-large: 1rem;
+    --padding-extra-large: 2rem;
+    --padding-left-right: 0rem 2rem;
+
+    --gap-medium: 0.6rem;
+    --gap-large: 1rem;
+    --gap-extra-large: 2rem;
+}
+
+
+/* Toutes les règles primaires */
+html {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: inherit;
+    color: inherit;
+    font: inherit;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    font-family: var(--font-main);
+}
+
+
+/* Gestion des marges et des paddings principaux */
+body > * {
+    padding: var(--padding-left-right);
+}
+
+footer {
+    padding: var(--padding-extra-large);
+}
+
+
+/* Textes (H1, H2, ...) */
+h1 {
+    font-size: var(--text-size-extra-large);
+}
+
+h2 {
+    font-size: var(--text-size-large);
+}
+
+/* Font Weight */
+h1, h2, h3, button, .bold,
+footer li:first-child, input[type="submit"] {
+    font-weight: var(--font-weight-extra-bold);
+}
+
+
+/* Les display flex et justify */
+header ul, 
+aside> article > a,
+aside > article,
+span {
+    display: flex;
+    gap: var(--gap-medium);
+}
+
+
+/* Space between */
+.flex {
+    justify-content: space-between;
+    gap: var(--gap-medium);
+}
+
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-medium); 
+}
+
+
+/* Navigation Header */
+header li {
+    padding: var(--padding-extra-large);
+    border-top: 0.2rem transparent solid;
+}
+
+/* Navigation Hover */
+header li:hover:not(:last-child) {
+    color: var(--color-primary);
+    border-top: 0.2rem solid var(--color-primary);
+}
+
+
+main > div > div:nth-child(4) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--gap-large);
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--border-radius-absolu);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray-black);
+}
+
+
+button > em.fa-solid {
+    background-color: var(--color-white-blue);
+    color: var(--color-primary);
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -0.2rem;
+    font-size: 1.3rem;
+}
+
+button > span {
+    display: flex;
+    padding: 0rem 0.8rem;
+}
+
+
+
+/* FAIT */
+/* Section */ 
+section:nth-child(2) {
+    display: flex;
+    gap: var(--gap-extra-large);
+}
+
+section > div, section > aside {
+    padding: var(--padding-extra-large);
+    border-radius: var(--border-radius-extra-big);
+}
+
+/* Articles */
+article {
+    border-radius: var(--border-radius-big);
+    box-shadow: 0 0 16px #0000002e;
+    background-color: var(--color-white);
+}
+
+article:hover {
+    transform: scale(1.01);
+}
+
+
+aside > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Fait */
+article {
+    display: flex;
+    gap: var(--gap-medium);
+    padding: var(--padding-small);
+    border-radius: var(--border-radius-big);
+    background-color: var(--color-white-blue);
+}
+
+aside article:hover {
+    transform: scale(1.01);
+}
+
+/* Aside Images */
+article img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+
+}
+
+aside img {
+    width: 40%;
+}
+
+.grid__hebergement img {
+    height: 7rem;
+}
+
+/* Les grids */
+.grid__hebergement {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto repeat(1, 1fr) auto;
+    column-gap: var(--gap-extra-large);
+    row-gap: var(--gap-extra-large);
+}
+
+
+
+/* Footer */
+footer {
+    display: flex;
+    gap: var(--gap-extra-large);
+}
+
+
+/* Les couleurs / couleurs des étoiles */
+.fa-star[data-active="true"], ul > li > a.bold[href="#inscriptions"] {
+    color: var(--color-primary);
+}
+
+.fa-star[data-active="false"] {
+    color: var(--color-gray-black);
+}
+
+
+/* Couleurs des sections */
+section > div:not(:nth-child(2)), 
+footer,
+aside{
+    background-color: var(--color-gray);
+}
+
+

@@ -1,0 +1,273 @@
+/* Les variables */
+:root {
+    --font-weight-bold: 600;
+    --font-weight-extra-bold: 750;
+
+    --color-primary: #0065FC;
+    --color-white-blue: #DEEBFF;
+    --color-white: #ffffff;
+    --color-gray: #F0F0F0;
+    --color-gray-black: #D9D9D9;
+
+    --font-main: "Raleway", sans-serif;
+    --text-size-medium: 1rem;
+    --text-size-large: 1.5rem;
+    --text-size-extra-large: 2rem;
+
+    --border-radius-normal: 0.5rem;
+    --border-radius-big: 1rem;
+    --border-radius-extra-big: 1rem;
+    --border-radius-absolu: 5rem;
+
+    --margin-medium: 1rem;
+    --margin-left-right: 0rem 2rem;
+    --margin-extra: 1rem;
+
+    --padding-small: 0.3rem;
+    --padding-large: 1rem;
+    --padding-extra-large: 2rem;
+    --padding-left-right: 0rem 2rem;
+
+    --gap-medium: 0.6rem;
+    --gap-large: 1rem;
+    --gap-extra-large: 2rem;
+    --gap-extra: 4rem;
+}
+
+
+/* Toutes les règles primaires */
+html {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: inherit;
+    color: inherit;
+    font: inherit;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    font-family: var(--font-main);
+}
+
+
+/* Gestion des marges et des paddings principaux */
+body > * {
+    padding: var(--padding-left-right);
+}
+
+/* Textes (H1, H2, ...) */
+h1 {
+    font-size: var(--text-size-extra-large);
+}
+
+h2 {
+    font-size: var(--text-size-large);
+}
+
+/* Bolds */
+h1, h2, h3, button, .bold,
+footer li:first-child, input[type="submit"] {
+    font-weight: var(--font-weight-extra-bold);
+}
+
+
+
+/* Partie : Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-medium); 
+}
+
+ul {
+    display: flex;
+    gap: var(--gap-large);
+}
+
+header li {
+    padding: var(--padding-extra-large);
+    border-top: 0.2rem transparent solid;
+}
+
+header li:hover:not(:last-child) {
+    color: var(--color-primary);
+    border-top: 0.2rem solid var(--color-primary);
+}
+
+
+
+/* Partie : Title */
+main > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-large);
+    margin-bottom: 2rem;
+}
+
+/* Buttons filtres */
+main > div > div:nth-child(4) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--gap-large);
+}
+
+/* Buttons */
+button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--border-radius-absolu);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray-black);
+}
+
+/* Icons buttons */
+button > em.fa-solid {
+    background-color: var(--color-white-blue);
+    color: var(--color-primary);
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -0.2rem;
+    font-size: 1.3rem;
+}
+
+button > span {
+    display: flex;
+    padding: 0rem 0.8rem;
+}
+
+/* Partie : Sections */
+section:nth-of-type(1) {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: var(--gap-extra-large);
+    margin-bottom: 2rem;
+}
+
+section:nth-of-type(2) {
+    display: grid;
+    gap: var(--gap-extra-large);
+    margin-bottom: 2rem;
+}
+
+section:nth-of-type(1) > * {
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius-big);
+    padding: var(--padding-extra-large);
+}
+
+
+/* Les grids hébergements */
+.grid_heb {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto repeat(2, 1fr) auto;
+    column-gap: var(--gap-extra-large);
+    row-gap: var(--gap-extra-large);
+}
+
+
+
+aside > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-extra-large);
+}
+
+
+/* Articles */
+article {
+    border-radius: var(--border-radius-big);
+    box-shadow: 0 0 1rem #0000002e;
+    background-color: var(--color-white);
+    display: flex;
+}
+
+article:hover {
+    transform: scale(1.01);
+}
+
+section:nth-of-type(1) article {
+    padding: var(--padding-small);
+}
+
+.flex {
+    display: flex;
+    height: 100%;
+    gap: var(--gap-medium);
+}
+
+.flex > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+section img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    height: 7rem;
+}
+
+aside img {
+    max-width: 40%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Les couleurs / couleurs des étoiles */
+.fa-star[data-active="true"], ul > li > a.bold[href="#inscriptions"] {
+    color: var(--color-primary);
+}
+
+.fa-star[data-active="false"] {
+    color: var(--color-gray-black);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-gray);
+    padding: var(--padding-extra-large);
+    display: flex;
+    gap: var(--gap-extra);
+}
+
+footer ul {
+    flex-direction: column;
+}

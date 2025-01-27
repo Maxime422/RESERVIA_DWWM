@@ -1,48 +1,37 @@
 /* Les variables */
 :root {
-    --font-weight-light: 150;
-    --font-weight-medium: 300;
     --font-weight-bold: 600;
     --font-weight-extra-bold: 750;
-    --font-weight-black: 800;
-
 
     --color-primary: #0065FC;
     --color-white-blue: #DEEBFF;
     --color-white: #ffffff;
     --color-gray: #F0F0F0;
     --color-gray-black: #D9D9D9;
-    --color-black: #0a0a0a;
-
 
     --font-main: "Raleway", sans-serif;
-
-
     --text-size-medium: 1rem;
     --text-size-large: 1.5rem;
     --text-size-extra-large: 2rem;
 
-
     --border-radius-normal: 0.5rem;
     --border-radius-big: 1rem;
     --border-radius-extra-big: 1rem;
-    --border-radius-absolu: 6rem;
+    --border-radius-absolu: 5rem;
 
-
-    --margin-small: 0.25rem;
     --margin-medium: 1rem;
-    --padding-buttons-small: 0.5rem 0.65rem;
+    --margin-left-right: 0rem 2rem;
+    --margin-extra: 1rem;
 
-    --padding-buttons-medium: 1rem 1.5rem;
-    --padding-medium: 0.6rem;
+    --padding-small: 0.3rem;
     --padding-large: 1rem;
     --padding-extra-large: 2rem;
+    --padding-left-right: 0rem 2rem;
 
     --gap-medium: 0.6rem;
     --gap-large: 1rem;
     --gap-extra-large: 2rem;
 }
-
 
 
 /* Toutes les règles primaires */
@@ -65,16 +54,14 @@ html {
 }
 
 
-
 /* Gestion des marges et des paddings principaux */
 main, footer {
-    padding: 0rem 2rem;
+    padding: var(--padding-left-right)
 }
 
 footer {
     padding: var(--padding-extra-large);
 }
-
 
 
 /* Textes (H1, H2, ...) */
@@ -92,20 +79,30 @@ footer li:first-child, input[type="submit"] {
 }
 
 
-
-
-/* Les display */
-.disp, footer, header,
-aside a, span, aside>article>a{
+/* Les display flex et justify */
+header ul, 
+aside>article>a {
     display: flex;
 }
 
 
+/* Modifier le flex rows !!!! */
+aside> article, span, aside a, .flex_rows {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-medium);
+}
+
+header, aside > article > a > div {
+    justify-content: space-between;
+    gap: var(--gap-medium);
+}
+
 
 /* Header */
 header {
-    margin:  0rem 2rem;
-    justify-content: space-between;
+    display: flex;
+    margin: var(--margin-left-right);
     align-items: flex-start;
 }
 
@@ -113,27 +110,24 @@ header {
 header li {
     padding: var(--padding-extra-large);
     border-top: 0.2rem transparent solid;
-    transition-duration: 0.5s;
 }
 
 /* Navigation Hover */
-header li:hover {
+header li:hover:not(:last-child) {
     color: var(--color-primary);
     border-top: 0.2rem solid var(--color-primary);
 }
 
 
-
-
 /* Div title */
-main>div {
+main > div {
     display: flex;
     flex-direction: column;
     gap: var(--gap-medium);
     margin-bottom: 2rem;
 }
 
-main>div>div:nth-child(4) {
+main > div > div:nth-child(4) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -145,7 +139,6 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: var(--gap-medium);
 
     border-radius: var(--border-radius-absolu);
     background-color: var(--color-white);
@@ -168,8 +161,12 @@ button > em.fa-solid {
 }
 
 button > span {
+    display: flex;
     padding: 0rem 0.8rem;
 }
+
+
+
 
 /* Section */
 section:nth-child(2) {
@@ -177,10 +174,9 @@ section:nth-child(2) {
     gap: var(--gap-extra-large);
 }
 
-section>div, section>aside {
+section > div, section > aside {
     padding: var(--padding-extra-large);
     border-radius: var(--border-radius-extra-big);
-
 }
 
 /* Articles */
@@ -194,69 +190,71 @@ article:hover {
     transform: scale(1.01);
 }
 
+
+
 /* Aside articles */
-aside {
+.flex_column, section>* {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    border: var(--color-white)  0.2rem solid;
+    gap: var(--gap-extra-large);
 }
 
-aside> div {
+aside > div {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-aside article {
+
+/* Fait */
+article {
     display: flex;
     gap: var(--gap-medium);
-    padding: var(--padding-medium);
-    border-radius: var(--border-radius-normal);
+    padding: var(--padding-small);
+    border-radius: var(--border-radius-big);
     background-color: var(--color-white-blue);
 }
 
 aside article:hover {
     transform: scale(1.01);
 }
- 
+
+/* Aside Images */
+article img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+
+}
+
+aside img {
+    width: 40%;
+}
+
+.grid__hebergement img {
+    height: 7rem;
+}
 
 /* Les grids */
 .grid__hebergement {
     display: grid;
-    gap: 2%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto repeat(1, 1fr) auto;
-    column-gap: 2rem;
-    padding: 1.7rem;
-    background-attachment: fixed;
+    column-gap: var(--gap-extra-large);
+    row-gap: var(--gap-extra-large);
 }
 
 
-  /* Aside Images */
-  article img {
-    height: 7rem;
-    object-fit: cover;
-    width: 100%;
-    height: 10%;
-    max-width: 10%;
-}
 
-/* la gestions des articles */
-article a {
+/* Footer */
+footer {
     display: flex;
-    flex-direction: column;
-    height: 100%;
+    gap: var(--gap-extra-large);
 }
 
 
-/* Colors */
-.color__gray, 
-footer,
-aside{
-    background-color: var(--color-gray);
-}
-
-
+/* Les couleurs / couleurs des étoiles */
 .fa-star[data-active="true"], ul > li > a.bold[href="#inscriptions"] {
     color: var(--color-primary);
 }
@@ -265,14 +263,12 @@ aside{
     color: var(--color-gray-black);
 }
 
-/* Supprimer */
-img {
-    width: 10px;
-    height: 10px;
+
+/* Couleurs des sections */
+section > div:not(:nth-child(2)), 
+footer,
+aside{
+    background-color: var(--color-gray);
 }
 
 
-/* Li Footer et Header */
-footer li {
-    padding: var(--padding-medium);
-}
