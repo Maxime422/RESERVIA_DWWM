@@ -260,14 +260,3 @@ aside img {
     color: var(--color-gray-black);
 }
 
-/* Footer */
-footer {
-    background-color: var(--color-gray);
-    padding: var(--padding-extra-large);
-    display: flex;
-    gap: var(--gap-extra);
-}
-
-footer ul {
-    flex-direction: column;
-}
