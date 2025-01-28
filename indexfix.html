@@ -15,7 +15,7 @@
 
 <body>
     <!-- Header -->
-    <header class="container">
+    <header id="header" class="container">
             <a href="#" title="Retour à la page d'accueil">
                 <img src="reservia_logo.svg" width="100px" alt="Logo de Reservia">
             </a>
@@ -34,24 +34,22 @@
     <!-- Main -->
     <main class="container">
         <!-- Section / Titre Recherches & Filtres -->
-        <section>
+        <section id="title_search">
             <h1>Trouvez votre Hébergement pour des vacances de rêve</h1>
             <span>En plein centre ville ou en pleine nature</span>
 
             
             <!-- Barre de recherche -->
-            <div>
-                <form>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <input type="search" name="ShearchBar" id="ShearchBar" placeholder="Marseille, France">
-                    <input type="submit" value="Rechercher">
-                </form>
-            </div>
+            <form>
+                <label for="ShearchBar"><i class="fa-solid fa-location-dot"></i></label>
+                <input type="search" name="ShearchBar" id="ShearchBar" placeholder="Marseille, France">
+                <input type="submit" id="CTA" value="Rechercher">
+            </form>
 
 
             <!-- Nav Filtres -->
             <nav>
-                <sapn>Filtres</span>
+                <span>Filtres</span>
                 <button>
                     <i class="fa-solid fa-money-bill-wave"></i>
                     <span>Économique</span>
@@ -82,8 +80,8 @@
 
 
         <!-- Section / Hébergements -->
-        <section>
-            <section>
+        <section id="hebergement">
+            <div>
                 <header>
                     <h2>Hébergement à Marseille</h2>
                 </header>
@@ -206,7 +204,7 @@
 
                 <!-- Liens afficher plus -->
                 <a href="#">Afficher plus</a>
-            </section>
+            </div>
          
 
 
@@ -349,26 +347,28 @@
 
     <!-- Footer / Nav -->
     <footer>
-        <ul>
-            <li>À propos</li>
-            <li><a href="#">Fonctionnement du site</a></li>
-            <li><a href="#">Conditions générales de ventes</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li>À propos</li>
+                <li><a href="#">Fonctionnement du site</a></li>
+                <li><a href="#">Conditions générales de ventes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
 
 
-        <ul>
-            <li>Nos Hébergements</li>
-            <li><a href="#">Charte qualité</a></li>
-            <li><a href="#">Soumettre votre hôtel</a></li>
-        </ul>
+            <ul>
+                <li>Nos Hébergements</li>
+                <li><a href="#">Charte qualité</a></li>
+                <li><a href="#">Soumettre votre hôtel</a></li>
+            </ul>
 
 
-        <ul>
-            <li>Assistance</li>
-            <li><a href="#">Centre d'aide</a></li>
-            <li><a href="#">Nous contacter</a></li>
-        </ul>
+            <ul>
+                <li>Assistance</li>
+                <li><a href="#">Centre d'aide</a></li>
+                <li><a href="#">Nous contacter</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>

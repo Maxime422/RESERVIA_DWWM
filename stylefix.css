@@ -23,7 +23,8 @@
     --margin-left-right: 0rem 2rem;
     --margin-extra: 1rem;
 
-    --padding-small: 0.3rem;
+    --padding-small: 0.4rem;
+    --padding-medium: 0.8rem;
     --padding-large: 1rem;
     --padding-extra-large: 2rem;
     --padding-left-right: 0rem 2rem;
@@ -78,3 +79,151 @@ h1, h2, h3, button, .bold,
 footer li:first-child, input[type="submit"] {
     font-weight: var(--font-weight-extra-bold);
 }
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+/* Header */
+#header {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap-extra-large);
+    align-items: center;
+}
+
+#header ul {
+    display: flex;
+    gap: var(--gap-large);
+}
+
+#header li {
+    padding: var(--padding-extra-large);
+    border-top: 0.2rem transparent solid;
+}
+
+#header li:hover:not(:last-child) {
+    color: var(--color-primary);
+    border-top: 0.2rem solid var(--color-primary);
+}
+
+/* Section titres */
+#title_search {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-medium);
+}
+
+/* Form */
+#title_search form {
+    display: flex;
+}
+
+#title_search form label {
+
+    padding: var(--padding-medium);
+    background-color: var(--color-white-blue);
+    border-radius: 1rem 0 0 1rem;
+}
+
+#title_search form #ShearchBar {
+    padding: var(--padding-medium);
+    border: 1px solid var(--color-white-blue);
+}
+
+#title_search form #CTA {
+    margin-left: -10px;
+    padding: var(--padding-medium);
+    border-radius: 0 1rem 1rem 0;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+/* Buttons */
+#title_search nav {
+    padding: 1rem 0rem;
+    display: flex;
+    gap: var(--gap-large);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+#title_search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--border-radius-absolu);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray-black);
+}
+
+/* Icons buttons */
+#title_search button > i {
+    background-color: var(--color-white-blue);
+    color: var(--color-primary);
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -1px;
+    font-size: 1.2rem;
+}
+
+#title_search button > span {
+    display: flex;
+    padding: 0rem 0.8rem;
+}
+
+#title_search>div>i {
+    border-radius: 50%;
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    border: 2px solid var(--color-gray-black);
+    padding: var(--padding-small);
+    margin-right: 0.3rem;
+}
+
+#hebergement {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--gap-large);
+    margin: 2rem 0;
+}
+
+#hebergement aside,
+#hebergement>div {
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius-extra-big);
+    padding: var(--padding-medium);
+}
+
+#hebergement > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto repeat(2, 1fr) auto;
+    gap: var(--gap-large);
+    padding: 1rem 2rem;
+}
+
+#hebergement > div > header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+#hebergement > div > article {
+    grid-column: span 1;
+}
+
+#hebergement > div > a {
+    grid-column: 1 / -1;
+    grid-row: 4;
+}
+
