@@ -227,3 +227,39 @@ footer li:first-child, input[type="submit"] {
     grid-row: 4;
 }
 
+#hebergement article {
+    border-radius: var(--border-radius-big);
+    box-shadow: 0 0 1rem #0000002e;
+    background-color: var(--color-white);
+    border: 4px solid var(--color-white);
+    overflow: hidden;
+}
+
+#hebergement>aside article a {
+    display: flex;
+    gap: var(--gap-medium);
+}
+
+#hebergement>aside article a>div>div {
+    display: flex;
+    align-self: flex-end;
+}
+
+
+#hebergement>div figure {
+    width: 100%;
+}
+
+#hebergement>aside figure {
+    width: 40%;
+}
+
+#hebergement img {
+    width: 100%;
+}
+
+article:hover {
+    transform: scale(1.01);
+}
+
+
