@@ -108,12 +108,18 @@ footer li:first-child, input[type="submit"] {
     gap: var(--gap-large);
 }
 
-#header li {
+#header div {
+    display: flex;
+    gap: var(--gap-extra-large);
+    align-items: center;
+}
+
+#header li{
     padding: var(--padding-extra-large);
     border-top: 0.2rem transparent solid;
 }
 
-#header li:hover:not(:last-child) {
+#header li:hover {
     color: var(--color-primary);
     border-top: 0.2rem solid var(--color-primary);
 }
@@ -172,6 +178,13 @@ footer li:first-child, input[type="submit"] {
     border: 2px solid var(--color-gray-black);
 }
 
+#title_search button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transition: all ease 0.5s;
+}
+
+
 /* Icons buttons */
 #title_search button > i {
     background-color: var(--color-white-blue);
@@ -197,7 +210,7 @@ footer li:first-child, input[type="submit"] {
     font-size: 0.8rem;
     color: var(--color-primary);
     border: 2px solid var(--color-gray-black);
-    padding: var(--padding-small);
+    padding: 0.3rem 0.6rem;
     margin-right: 0.3rem;
 }
 
@@ -252,10 +265,14 @@ footer li:first-child, input[type="submit"] {
 
 /* Hébergement Aside */
 #hebergements>aside article a {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: flex;
     height: 100%;
 }
+#hebergements>aside article {
+    height: 8rem;
+}
+
+
 
 #hebergements > aside > header {
     display: flex;
@@ -269,9 +286,10 @@ footer li:first-child, input[type="submit"] {
 #hebergements article,
 #activity article {
     border-radius: var(--border-radius-big);
-    box-shadow: 0 0 1rem #0000002e;
+    box-shadow: 0 0 1rem #00000031;
     background-color: var(--color-white);
     overflow: hidden;
+    transition-duration: 0.1s;
 }
 
 #hebergements>div article a {
@@ -293,7 +311,7 @@ article:hover {
 /* Hébergement Div Articles */
 #hebergements>div img {
     object-fit: cover;
-    height: 8rem;
+    height: 9rem;
     width: 100%;
 }
 
@@ -313,6 +331,10 @@ article:hover {
     height: 100%;
 }
 
+#hebergements>aside article a>div {
+    width: 50%;
+}
+
 #hebergements>aside img,
 #activity img {
     object-fit: cover;
@@ -320,8 +342,13 @@ article:hover {
     width: 100%;
 }
 
+#hebergements>aside figure {
+    width: 50%;
+    height: 9rem;
+}
+
 /* Les couleurs / couleurs des étoiles */
-.fa-star[data-active="true"], ul > li > a.bold[href="#inscriptions"] {
+.fa-star[data-active="true"], div > a.bold[href="#inscriptions"] {
     color: var(--color-primary);
 }
 
@@ -396,4 +423,85 @@ footer div ul {
     display: flex;
     flex-direction: column;
     gap: var(--gap-large);
+}
+
+
+
+
+@media (max-width: 576px) {
+    #activity {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #activity figure {
+        height: 10rem;
+    }
+
+    #header {
+        align-items: center;
+    }
+
+    #header div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #header div > nav{
+        order: 1;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    #hebergements > div {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+
+    #activity {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto repeat(6, minmax(4rem, 10rem));
+        grid-template-areas: 
+            "title" 
+            "p1"          
+            "p2"         
+            "p3"
+            "p4"            
+            "p5"          
+            "p6";
+    }
+    footer div {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
+
+
+
+@media (max-width: 992px) {
+    #hebergements {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #hebergements >div {
+        order: 1;
+    }
+
+    #hebergements>aside article {
+        height: 10rem;
+    }
+
+    #activity {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto repeat(3, minmax(4rem, 10rem));
+        grid-template-areas: 
+            "title title" 
+            "p1 p2"            
+            "p3 p4"          
+            "p5 p6";
+    }
 }
